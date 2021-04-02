@@ -64,11 +64,9 @@ def passwordgen():
 
 
 def passphrasegen():
-    os.chdir("/Users/katzadoo/Documents/python")
-
     while True:
     
-        file = open("wordlist2.txt", "r")
+        file = open("wordlist.txt", "r")
         content = file.read()
         wordlist = content.split()
         file.close()
