@@ -3,7 +3,7 @@ import random
 import secrets
 import string
 
-user = input("what program would you like to use?\n type 1 for the password generator, type 2 for the passphrase generator.")
+user = input("what program would you like to use?\n type 1 for the password generator, type 2 for the passphrase generator: ")
 def passwordgen():
     #Password generator
     #importing modules
@@ -70,7 +70,8 @@ def passphrasegen():
         content = file.read()
         wordlist = content.split()
         file.close()
-        passphrase = (" ".join(random.choices(wordlist, k = 4)))
+        length = int(input("how many words would you like in your pass phrase?"))
+        passphrase = (" ".join(random.choices(wordlist, k = length)))
     
         print("your passphrase has been generated. It is: " + passphrase)
 
